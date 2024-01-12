@@ -1,0 +1,11 @@
+---
+name: Build Pipeline
+on:
+  push:
+    branches: [main]
+
+jobs:
+  dev:
+    name: Deploy Dev
+    uses: naveen-visions/workflows/.github/workflows/testing.yml@main
+    secrets: inherit
