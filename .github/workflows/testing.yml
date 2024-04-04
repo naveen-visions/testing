@@ -8,4 +8,6 @@ jobs:
   dev:
     name: Deploy Dev
     uses: naveen-visions/workflows/.github/workflows/testing.yml@gitops
+    with:
+     gitopsRepo: testing-pipeline
     secrets: inherit
