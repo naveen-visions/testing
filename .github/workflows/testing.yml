@@ -10,4 +10,5 @@ jobs:
     uses: naveen-visions/workflows/.github/workflows/testing.yml@gitops
     with:
      gitopsRepo: testing-pipeline
+     environment: main
     secrets: inherit
