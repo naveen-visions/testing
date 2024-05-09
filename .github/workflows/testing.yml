@@ -7,8 +7,8 @@ on:
 jobs:
   dev:
     name: Deploy Dev
-    uses: naveen-visions/workflows/.github/workflows/test2.yaml@gitops
-    with:
-     gitopsRepo: naveen-visions/testing-pipeline
-     environment: main
+    uses: naveen-visions/workflows/.github/workflows/test.yaml@main
+    # with:
+    #  gitopsRepo: naveen-visions/testing-pipeline
+    #  environment: main
     secrets: inherit
