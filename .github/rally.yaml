@@ -26,7 +26,7 @@ rally:
   ## This is required if we don't use username/password
   ## NOTE: If you set this in your .env file then you can
   ## leave this commented out. It will override your .env
-  #api_key: _1234abc567...
+  api_key: _ER5bgHLURomtDepEOkwiIqO4sJg50Ngt0Z3v8yC7Y0
 
   # Which workspace OID this repo will link to
   workspace: 732295181215
