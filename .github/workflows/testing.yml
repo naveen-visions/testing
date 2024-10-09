@@ -12,5 +12,5 @@ jobs:
     uses: naveen-visions/workflows/.github/workflows/revert.yml@main
     with:
     #  gitopsRepo: naveen-visions/testing-pipeline
-     rollback_tag: 1.0.12
+     rollback_tag: 1.0.14
     secrets: inherit
