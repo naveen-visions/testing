@@ -7,7 +7,7 @@ on:
 jobs:
   dev:
     name: Deploy Dev
-    uses: naveen-visions/workflows/.github/workflows/revert.yaml@main
+    uses: naveen-visions/workflows/.github/workflows/revert.yml@main
     with:
     #  gitopsRepo: naveen-visions/testing-pipeline
      rollback_tag: 1.0.12
