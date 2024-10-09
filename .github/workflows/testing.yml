@@ -3,7 +3,9 @@ name: Build Pipeline
 on:
   push:
     branches: [main]
-
+permissions:     
+  contents: read     
+  id-token: write 
 jobs:
   dev:
     name: Deploy Dev
