@@ -2,13 +2,13 @@
 name: Build Pipeline
 on:
   push:
-    branches: [main1]
+    branches: [main]
 
 jobs:
   dev:
     name: Deploy Dev
-    uses: naveen-visions/workflows/.github/workflows/test.yaml@main
-    # with:
+    uses: naveen-visions/workflows/.github/workflows/revert.yaml@main
+    with:
     #  gitopsRepo: naveen-visions/testing-pipeline
-    #  environment: main
+     rollback_tag: 1.0.12
     secrets: inherit
