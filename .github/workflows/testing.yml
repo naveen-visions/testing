@@ -6,6 +6,8 @@ on:
 permissions:     
   contents: write     
   id-token: write
+  actions: write
+  pull-requests: write
 
 jobs:
   dev:
