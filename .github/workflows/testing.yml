@@ -14,5 +14,5 @@ jobs:
     with:
     #  gitopsRepo: naveen-visions/testing-pipeline
      rollback_tag: 1.0.16
-    secrets: inherit
+    secrets: inherit 
     
