@@ -10,7 +10,7 @@ permissions:
 jobs:
   dev:
     name: Deploy Dev
-    uses: naveen-visions/workflows/.github/workflows/revert.yml@main
+    uses: naveen-visions/workflows/.github/workflows/check.yml@check
     with:
     #  gitopsRepo: naveen-visions/testing-pipeline
      rollback_tag: 1.0.16
