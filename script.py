@@ -1,6 +1,7 @@
 from pyral import Rally
 import os
 import sys
+import re
 
 def create_rally_pull_request(rally_client, ref, pr):
     try:
@@ -38,8 +39,9 @@ if __name__ == "__main__":
     # Extract user story ID from pull request body
     user_story_id = None
     for line in pr_body.splitlines():
-        if line.startswith('userstoryID'):
-            user_story_id = line.split('=')[1].strip()
+        match = re.search(r'\bUS\d+\b', line)
+        if match:
+            user_story_id = match.group(0)  # This will capture 'US' followed by digits
             break
 
     if not user_story_id:
