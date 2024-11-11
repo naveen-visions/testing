@@ -55,7 +55,7 @@ def create_rally_pull_request(rally_client, ref, pr):
             "Artifact": ref,
             "Name": pr["title"],
             "Url": pr["html_url"],
-            "Description": "This is workflow ID: pr["build_number"]",
+            "Description": f"This is workflow ID {pr['build_number']}",
         }
         result = rally_client.create('PullRequest', data)
         print(f"Created Pull Request: {result}")
