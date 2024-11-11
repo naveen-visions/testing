@@ -115,7 +115,7 @@ if __name__ == "__main__":
                 build = {
                     "number": pr_number,
                     "title": pr_title,
-                    "html_url": pr_html_url
+                    "html_url": pr_html_url,
                     "build_number": build_number
                 }
                 create_rally_pull_request(rally_client, ref, build)
