@@ -56,6 +56,7 @@ def create_rally_pull_request(rally_client, ref, pr):
             "Name": pr["title"],
             "Url": pr["html_url"],
             "Description": f"This is workflow ID {pr['build_number']}",
+            "Project": pr["repo_name"],
         }
         result = rally_client.create('PullRequest', data)
         print(f"Created Pull Request: {result}")
@@ -85,6 +86,7 @@ if __name__ == "__main__":
     pr_html_url = sys.argv[3]
     pr_body = sys.argv[4]
     build_number = sys.argv[5]
+    repo_name = sys.argv[6]
 
     # Extract all unique user story IDs from pull request body
     formatted_ids = extract_user_story_ids(pr_body)
@@ -117,6 +119,7 @@ if __name__ == "__main__":
                     "title": pr_title,
                     "html_url": pr_html_url,
                     "build_number": build_number
+                    "repo_name": repo_name
                 }
                 create_rally_pull_request(rally_client, ref, build)
             else:
