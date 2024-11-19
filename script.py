@@ -118,7 +118,7 @@ if __name__ == "__main__":
                     "number": pr_number,
                     "title": pr_title,
                     "html_url": pr_html_url,
-                    "build_number": build_number
+                    "build_number": build_number,
                     "repo_name": repo_name
                 }
                 create_rally_pull_request(rally_client, ref, build)
