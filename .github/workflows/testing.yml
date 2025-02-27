@@ -8,16 +8,18 @@ permissions:
   id-token: write
 
 jobs:
-  dev:
-    name: Deploy Dev
-    uses: naveen-visions/workflows/.github/workflows/python-test.yml@check
-    secrets: inherit 
+  # dev:
+  #   name: Deploy Dev
+  #   uses: naveen-visions/workflows/.github/workflows/python-test.yml@check
+  #   secrets: inherit 
 
   testing:
     runs-on: ubuntu-latest
-    needs: dev
+    # needs: dev
     steps:
       - name: testing
         run: |
           echo "this is testing ${{ needs.dev.outputs.output_test }}"
+      - name: testing1
+        uses: naveen-visions/workflows/.github/workflows/python-test.yml@check
     
